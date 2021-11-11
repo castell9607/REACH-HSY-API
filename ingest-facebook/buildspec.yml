@@ -7,7 +7,13 @@ phases:
       - pip3 install facebook_business==12.0.0
 
   build:
-    commands:
-      - cd ingest-facebook
-      - chmod +x ingest_facebook.py    
-      - ./ingest_facebook.py 
+    commands: 
+      - chmod +x ingest_facebook.py
+      - export IS_AUTOMATED=""
+      - export START_YEAR="2021"
+      - export START_MONTH="11"
+      - export START_DAY="01"
+      - export END_YEAR="2021"
+      - export END_MONTH="11"
+      - export END_DAY="08"
+      - ./ingest_facebook.py
