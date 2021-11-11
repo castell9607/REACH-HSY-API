@@ -29,9 +29,9 @@ def make_call(time_range, ad_account_id, ad_account_name):
         "reach"    
     ]
     params = {
-        "level": "ad",
-        "time_increment": 1,
-        "breakdowns": ["age", "gender"],
+        "level": "account",
+        "time_increment": "all_days",
+        #"breakdowns": ["age", "gender"],
         "time_range": {"since": time_range.strftime("%Y-%m-%d"), "until": time_range.strftime("%Y-%m-%d")},
     }
 
