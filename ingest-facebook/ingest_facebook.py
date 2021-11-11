@@ -67,7 +67,7 @@ def make_call(time_range, ad_account_id, ad_account_name):
         writer.writeheader()
         writer.writerows(rows)
 
-    s3.upload_file(filename, os.environ["TARGET_BUCKET"], "raw2_reach/{}".format(filename))
+    s3.upload_file(filename, os.environ["TARGET_BUCKET"], "raw2_reach/facebook/{}".format(filename))
     print("UPLOADED: {}".format(filename))
 
 
