@@ -8,6 +8,7 @@ phases:
 
   build:
     commands: 
+      - cd ingest-facebook
       - chmod +x ingest_facebook.py
       - export IS_AUTOMATED=""
       - export START_YEAR="2021"
