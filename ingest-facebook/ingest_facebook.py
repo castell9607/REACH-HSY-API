@@ -61,7 +61,7 @@ def make_call(time_range, ad_account_id, ad_account_name):
         print("NO DATA FOR {} IN: {}".format(ad_account_name, time_range.strftime("%Y-%m-%d")))
         return
 
-    filename = "{}-{}.csv".format(ad_account_id,"Reach-report", time_range.strftime("%Y-%m-%d"))
+    filename = "{}-{}.csv".format(ad_account_id, time_range.strftime("%Y-%m-%d"))
     with open(filename, "w") as f_csv:
         writer = csv.DictWriter(f_csv, fieldnames=keys, restval="", extrasaction="ignore")
         writer.writeheader()
